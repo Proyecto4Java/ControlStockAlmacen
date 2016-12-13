@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-12-2016 a las 17:43:34
+-- Tiempo de generación: 13-12-2016 a las 17:57:20
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -175,7 +175,7 @@ INSERT INTO `tbl_personas` (`persona_id`, `persona_usuario`, `persona_password`)
 CREATE TABLE `tbl_producte` (
   `prod_id` int(11) NOT NULL,
   `prod_nom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `prod_foto` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `prod_preu` tinyint(1) NOT NULL,
   `serie_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -183,17 +183,17 @@ CREATE TABLE `tbl_producte` (
 -- Volcado de datos para la tabla `tbl_producte`
 --
 
-INSERT INTO `tbl_producte` (`prod_id`, `prod_nom`, `prod_foto`, `serie_id`) VALUES
-(1, 'Dragon Ball', '', 10),
-(2, 'One Piece', '', 11),
-(3, 'Luffy', '', 12),
-(4, 'Kirito', '', 13),
-(5, 'Pikachu', '', 14),
-(6, 'Totoro', '', 15),
-(7, 'Naruto', '', 16),
-(8, 'SAO', '', 17),
-(9, 'Star Trek', '', 18),
-(10, 'Star Wars', '', 19);
+INSERT INTO `tbl_producte` (`prod_id`, `prod_nom`, `prod_preu`, `serie_id`) VALUES
+(1, 'Dragon Ball', 8, 10),
+(2, 'One Piece', 8, 11),
+(3, 'Luffy', 35, 12),
+(4, 'Kirito', 60, 13),
+(5, 'Pikachu', 15, 14),
+(6, 'Totoro', 10, 15),
+(7, 'Naruto', 15, 16),
+(8, 'SAO', 15, 17),
+(9, 'Star Trek', 10, 18),
+(10, 'Star Wars', 10, 19);
 
 -- --------------------------------------------------------
 
